@@ -42,3 +42,45 @@ A lightweight **React + Vite** application that uploads files directly to **Goog
 
 ```env
 VITE_GOOGLE_CLIENT_ID=your_client_id_here
+
+
+git clone https://github.com/darksoul729/react-drive-upload.git
+cd react-drive-upload
+npm install
+npm run dev
+
+Open your browser to http://localhost:5173 .
+
+
+
+npm run build    # Builds to /dist
+npm run preview  # Locally preview production build
+
+
+
+
+/src
+  ├─ main.jsx          # App entry point
+  ├─ App.jsx           # Main layout & logic
+  ├─ components/       # Reusable UI (Upload, Preview, etc.)
+  └─ services/         # Google Drive API integration
+/public                # Static assets (favicon, etc.)
+/vite.config.js        # Vite configuration
+/.env                  # Environment variables (gitignored)
+/README.md             # You are here!
+
+
+🔒 Security Best Practices
+Never expose client_secret, refresh tokens, or API keys in frontend code.
+For production, use a backend proxy (e.g., Node.js/Express) to handle token exchange and file uploads securely.
+Restrict OAuth redirect URIs strictly.
+Use HTTPS in production.
+📚 References
+    - Vite Documentation
+    - React Documentation
+    - Google Drive API Guide
+    - OAuth 2.0 for Browser-Based Apps (Google)
+
+
+MIT License • Copyright © 2025 [darksoul729]
+
