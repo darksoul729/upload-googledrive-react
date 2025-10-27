@@ -1,6 +1,4 @@
 
-
-```markdown
 # React Google Drive Upload
 
 [![Vite](https://img.shields.io/badge/Vite-4.0+-646CFF?logo=vite&logoColor=white)](https://vitejs.dev/)
@@ -125,6 +123,3 @@ npm run preview  # Preview the production build locally
 ---
 
 MIT License • Copyright © 2025 [darksoul729](https://github.com/darksoul729)
-```
-
----
