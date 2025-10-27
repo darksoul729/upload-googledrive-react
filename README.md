@@ -1,27 +1,34 @@
-Ah, oke! Kalau proyek ini **React + Vite untuk upload ke Google Drive**, README.md bisa disesuaikan agar jelas fungsinya, cara setup Google OAuth, dan penggunaan project. Berikut versi yang cocok:
+Perfect! Berikut versi **README.md profesional dan “GitHub-ready”** dengan badge build, npm version, React, Vite, dan MIT License. Cocok untuk halaman repo:
 
 ````markdown
 # React Google Drive Upload
 
-Proyek ini adalah aplikasi **React + Vite** untuk mengunggah file ke **Google Drive** menggunakan **Google OAuth 2.0**.
+[![Vite](https://img.shields.io/badge/Vite-4.0-blue?logo=vite)](https://vitejs.dev/) 
+[![React](https://img.shields.io/badge/React-18.2-blue?logo=react)](https://reactjs.org/)
+[![Node.js](https://img.shields.io/badge/Node.js-20-green?logo=node.js)](https://nodejs.org/)
+[![Build](https://github.com/darksoul729/react-drive-upload/actions/workflows/ci.yml/badge.svg)](https://github.com/darksoul729/react-drive-upload/actions)
+[![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
+
+A simple **React + Vite** project to upload files directly to **Google Drive** using **Google OAuth 2.0**.
 
 ---
 
-## Fitur
+## Features
 
-- Upload file langsung ke Google Drive.
-- Autentikasi Google OAuth.
-- Integrasi React dengan Vite untuk build cepat.
-- Hot Module Replacement (HMR) saat development.
+- Upload files directly to Google Drive
+- Google OAuth 2.0 authentication
+- Fast development with Vite HMR
+- Clean React + Vite setup
+- Secure: environment variables for secrets
 
 ---
 
-## Persiapan Google OAuth
+## Setup Google OAuth
 
-1. Buat project di [Google Cloud Console](https://console.cloud.google.com/).
-2. Aktifkan **Google Drive API**.
-3. Buat **OAuth 2.0 Client ID** untuk aplikasi web.
-4. Simpan credential berikut di file `.env` (jangan commit ke GitHub):
+1. Create a project in [Google Cloud Console](https://console.cloud.google.com/).
+2. Enable **Google Drive API**.
+3. Create **OAuth 2.0 Client ID** for web application.
+4. Store credentials in `.env` file (do **not** commit to GitHub):
 
 ```env
 VITE_GOOGLE_CLIENT_ID=your_client_id
@@ -29,32 +36,24 @@ VITE_GOOGLE_CLIENT_SECRET=your_client_secret
 VITE_GOOGLE_REFRESH_TOKEN=your_refresh_token
 ````
 
-> **PENTING:** Jangan commit `.env` karena mengandung secrets. Gunakan `.gitignore`.
+> `.env` is ignored by Git. Never commit secrets.
 
 ---
 
-## Instalasi
+## Installation
 
-1. Clone repository:
+```bash
+git clone https://github.com/username/react-drive-upload.git
+cd react-drive-upload
+npm install
+npm run dev
+```
 
-   ```bash
-   git clone https://github.com/username/react-drive-upload.git
-   cd react-drive-upload
-   ```
-2. Install dependencies:
-
-   ```bash
-   npm install
-   ```
-3. Jalankan development server:
-
-   ```bash
-   npm run dev
-   ```
+Open [http://localhost:5173](http://localhost:5173) in your browser.
 
 ---
 
-## Build Produksi
+## Build for Production
 
 ```bash
 npm run build
@@ -63,38 +62,36 @@ npm run preview
 
 ---
 
-## Struktur Folder
+## Project Structure
 
 ```
 /src
-  ├─ main.jsx          # Entry point aplikasi
-  ├─ App.jsx           # Komponen utama
-  ├─ components/       # Komponen React
-  └─ services/         # Fungsi untuk Google Drive API
-/public                # File statis
-/vite.config.js        # Konfigurasi Vite
-.eslintrc.js           # Konfigurasi ESLint
-.env                   # Google OAuth secrets (tidak di-commit)
+  ├─ main.jsx          # Entry point
+  ├─ App.jsx           # Main component
+  ├─ components/       # React components
+  └─ services/         # Google Drive API functions
+/public                # Static files
+/vite.config.js        # Vite config
+.eslintrc.js           # ESLint config
+.env                   # Google OAuth secrets (ignored)
+/README.md             # Project documentation
 ```
 
 ---
 
-## Catatan Keamanan
+## Security Notes
 
-* Jangan commit file `.env` atau credential apapun.
-* Gunakan GitHub Secrets atau environment variables lokal untuk production.
+* Keep `.env` local only.
+* Use environment variables or GitHub Secrets for production deployment.
+* Do not commit any credentials.
 
 ---
 
-## Referensi
+## References
 
-* [Vite Official Documentation](https://vitejs.dev/)
-* [React Official Documentation](https://reactjs.org/)
+* [Vite Documentation](https://vitejs.dev/)
+* [React Documentation](https://reactjs.org/)
 * [Google Drive API](https://developers.google.com/drive/api)
 
 ```
 
-Jika mau, aku bisa buatkan versi **lebih ringkas dengan badge GitHub + React + Vite** biar README terlihat profesional di GitHub.  
-
-Apakah mau aku buatkan versi itu?
-```
