@@ -1,16 +1,100 @@
-# React + Vite
+Ah, oke! Kalau proyek ini **React + Vite untuk upload ke Google Drive**, README.md bisa disesuaikan agar jelas fungsinya, cara setup Google OAuth, dan penggunaan project. Berikut versi yang cocok:
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+````markdown
+# React Google Drive Upload
 
-Currently, two official plugins are available:
+Proyek ini adalah aplikasi **React + Vite** untuk mengunggah file ke **Google Drive** menggunakan **Google OAuth 2.0**.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## Fitur
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Upload file langsung ke Google Drive.
+- Autentikasi Google OAuth.
+- Integrasi React dengan Vite untuk build cepat.
+- Hot Module Replacement (HMR) saat development.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Persiapan Google OAuth
+
+1. Buat project di [Google Cloud Console](https://console.cloud.google.com/).
+2. Aktifkan **Google Drive API**.
+3. Buat **OAuth 2.0 Client ID** untuk aplikasi web.
+4. Simpan credential berikut di file `.env` (jangan commit ke GitHub):
+
+```env
+VITE_GOOGLE_CLIENT_ID=your_client_id
+VITE_GOOGLE_CLIENT_SECRET=your_client_secret
+VITE_GOOGLE_REFRESH_TOKEN=your_refresh_token
+````
+
+> **PENTING:** Jangan commit `.env` karena mengandung secrets. Gunakan `.gitignore`.
+
+---
+
+## Instalasi
+
+1. Clone repository:
+
+   ```bash
+   git clone https://github.com/username/react-drive-upload.git
+   cd react-drive-upload
+   ```
+2. Install dependencies:
+
+   ```bash
+   npm install
+   ```
+3. Jalankan development server:
+
+   ```bash
+   npm run dev
+   ```
+
+---
+
+## Build Produksi
+
+```bash
+npm run build
+npm run preview
+```
+
+---
+
+## Struktur Folder
+
+```
+/src
+  ├─ main.jsx          # Entry point aplikasi
+  ├─ App.jsx           # Komponen utama
+  ├─ components/       # Komponen React
+  └─ services/         # Fungsi untuk Google Drive API
+/public                # File statis
+/vite.config.js        # Konfigurasi Vite
+.eslintrc.js           # Konfigurasi ESLint
+.env                   # Google OAuth secrets (tidak di-commit)
+```
+
+---
+
+## Catatan Keamanan
+
+* Jangan commit file `.env` atau credential apapun.
+* Gunakan GitHub Secrets atau environment variables lokal untuk production.
+
+---
+
+## Referensi
+
+* [Vite Official Documentation](https://vitejs.dev/)
+* [React Official Documentation](https://reactjs.org/)
+* [Google Drive API](https://developers.google.com/drive/api)
+
+```
+
+Jika mau, aku bisa buatkan versi **lebih ringkas dengan badge GitHub + React + Vite** biar README terlihat profesional di GitHub.  
+
+Apakah mau aku buatkan versi itu?
+```
