@@ -1,41 +1,22 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import path from "path";
-import { fileURLToPath } from "url";
-import { NodeGlobalsPolyfillPlugin } from "@esbuild-plugins/node-globals-polyfill";
 
-// Buat __dirname di ESM
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
+// Konfigurasi lengkap untuk Vite + React + Ngrok
 export default defineConfig({
   plugins: [react()],
   resolve: {
     alias: {
-      "@": path.resolve(__dirname, "./src"),
-    },
-  },
-  define: {
-    "process.env": process.env, // agar process.env bisa dipakai di frontend
-  },
-  optimizeDeps: {
-    esbuildOptions: {
-      define: {
-        global: "globalThis",
-      },
-      plugins: [
-        NodeGlobalsPolyfillPlugin({
-          buffer: true, // polyfill Buffer
-        }),
-      ],
+      "@": path.resolve(__dirname, "./src"), // gunakan @ untuk import folder src
     },
   },
   server: {
-    host: "0.0.0.0", // akses dari luar (Ngrok)
+    host: "0.0.0.0", // agar bisa diakses dari luar (misalnya via ngrok)
     allowedHosts: [
-      "d13d55731b23.ngrok-free.app", // domain Ngrok tanpa https://
+      "d13d55731b23.ngrok-free.app", // domain ngrok kamu tanpa https://
     ],
-    port: 5173,
-    strictPort: true,
+    port: 5173, // port default vite (bisa diubah kalau perlu)
+    strictPort: true, // pastikan pakai port yang sama (tidak acak)
   },
 });
+23

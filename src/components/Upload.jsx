@@ -1,5 +1,6 @@
 import { useState, useRef } from "react";
 import axios from "axios";
+import { motion } from "framer-motion";
 import {
   UploadCloud,
   Loader2,
@@ -7,12 +8,6 @@ import {
   FileUp,
   FolderOpen,
 } from "lucide-react";
-
-// src/api/upload.js (frontend)
-import { Buffer } from 'buffer';
-const CLIENT_ID = import.meta.env.VITE_GOOGLE_CLIENT_ID;
-
-const myBuffer = Buffer.from('data');
 
 export default function Upload() {
   const [file, setFile] = useState(null);
